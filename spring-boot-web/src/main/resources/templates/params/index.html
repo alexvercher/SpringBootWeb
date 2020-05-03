@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.org">
+<head>
+<meta charset="ISO-8859-1" />
+<title th:text="${titulo}"></title>
+</head>
+<body>
+	<h1 th:text="${titulo}"></h1>
+	<ul>
+		<li><a th:href="@{/params/string(texto='Hola alex')}">/params/string?texto=Hola Alex</a></li>
+		<li><a th:href="@{/params/string(texto='Hola juan')}">/params/string?texto=Hola Juan</a></li>
+		<li><a th:href="@{/params/mix-params(saludo='Prueba mix params', numero = 10)}">/params/mix-params?texto=Prueba mix params&numero=10</a></li>
+		<li><a th:href="@{/params/mix-params-request(saludo='Prueba mix params', numero = 10)}">/params/mix-params-request?texto=Prueba mix params&numero=10</a></li>
+	</ul>
+</body>
+</html>
